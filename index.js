@@ -5,6 +5,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 const targetDate = params.target;
 const label = params.label;
 const contrast = params.contrast;
+const accent = params.accent;
 
 const labelEl = document.getElementById("title");
 const daysEl = document.getElementById("days");
@@ -20,6 +21,10 @@ if(contrast == "imposter"){
     document.body.style.color = "white";
     labelEl.style.color = "#58bfbe";
     secondsEl.style.color = "#58bfbe";
+}
+elif(accent){
+    labelEl.style.color = accent;
+    secondsEl.style.color = accent;
 }
 
 if (!targetDate) {
