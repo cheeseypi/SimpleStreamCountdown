@@ -22,7 +22,7 @@ if(contrast == "imposter"){
     labelEl.style.color = "#58bfbe";
     secondsEl.style.color = "#58bfbe";
 }
-elif(accent){
+else if(accent){
     labelEl.style.color = accent;
     secondsEl.style.color = accent;
 }
