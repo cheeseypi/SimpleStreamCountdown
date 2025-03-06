@@ -34,8 +34,8 @@ main {
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  column-gap: 5px;
+  row-gap: 0px;
 }
 
 .timerLabel {
