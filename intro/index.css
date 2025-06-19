@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Renogare;
+  src: url("/Renogare-Regular.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+
+body {
+  font-family: Renogare, sans-serif;
+  font-size: 40px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+main {
+  width: 100%;
+}
+
+.timebox {
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: inline-grid;
+  grid-template-columns: 1fr auto 1fr 1fr; 
+  grid-template-rows: auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-items: center;
+}
+
+.timerValue {
+  width: 28px;
+}
+
+.colon {
+  width: 20px;
+  transform: translateY(-5px);
+}
