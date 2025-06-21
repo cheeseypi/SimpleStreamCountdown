@@ -5,6 +5,7 @@ const params = new Proxy(new URLSearchParams(window.location.search), {
 let targetMinutes = params.minutes;
 let targetSeconds = params.seconds;
 const contrast = params.contrast;
+const scale = params.scale;
 
 const timeboxEl = document.getElementById("timer")
 const minutesEl = document.getElementById("minutes");
@@ -27,6 +28,19 @@ if (!targetMinutes && !targetSeconds) {
 }
 else if (!targetSeconds) {
   targetSeconds = 0
+}
+
+if(scale) {
+  timeboxEl.style.fontSize = (40*scale) + 'px'
+  let elements = document.querySelectorAll('.timerValue');
+  for(let el of elements){
+    el.style.width = (28*scale) + 'px'
+  }
+  elements = document.querySelectorAll('.colon');
+  for(let el of elements){
+    el.style.width = (20*scale) + 'px'
+    el.style.transform = 'translateY('+(-5*scale)+'px)'
+  }
 }
 
 let now = new Date();
