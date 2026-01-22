@@ -28,7 +28,7 @@ else if(accent){
 }
 
 if(neon) {
-  secondsEl.style.classList.add('neonText')
+  secondsEl.classList.add('neonText')
 }
 
 if (!targetDate) {
