@@ -3,6 +3,10 @@
   src: url("/Renogare-Regular.otf") format("opentype");
 }
 
+:root {
+  --accent-color: black;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +29,10 @@ main {
 
 #title {
   font-size: xx-large;
+  color: var(--accent-color)
+}
+#seconds {
+  color: var(--accent-color)
 }
 
 .timebox {
@@ -40,4 +48,17 @@ main {
 
 .timerLabel {
   font-size: small;
+}
+
+.neonText {
+  color: #fff !important;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px var(--accent-color),
+      0 0 82px var(--accent-color),
+      0 0 92px var(--accent-color),
+      0 0 102px var(--accent-color),
+      0 0 151px var(--accent-color);
 }

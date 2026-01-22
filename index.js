@@ -6,7 +6,9 @@ const targetDate = params.target;
 const label = params.label;
 const contrast = params.contrast;
 const accent = params.accent;
+const neon = params.neon;
 
+const root = document.documentElement;
 const labelEl = document.getElementById("title");
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
@@ -19,12 +21,14 @@ document.body.style.color = !!contrast ? "white" : "black";
 
 if(contrast == "imposter"){
     document.body.style.color = "white";
-    labelEl.style.color = "#58bfbe";
-    secondsEl.style.color = "#58bfbe";
+    root.style.setProperty('--accent-color', '#58bfbe')
 }
 else if(accent){
-    labelEl.style.color = accent;
-    secondsEl.style.color = accent;
+    root.style.setProperty('--accent-color', accent)
+}
+
+if(neon) {
+  secondsEl.style.classList.add('neonText')
 }
 
 if (!targetDate) {
