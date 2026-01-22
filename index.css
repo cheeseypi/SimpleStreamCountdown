@@ -54,8 +54,8 @@ main {
   color: #fff !important;
   text-shadow:
       0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
+      0 0 10px var(--accent-color),
+      0 0 21px var(--accent-color),
       0 0 42px var(--accent-color),
       0 0 82px var(--accent-color),
       0 0 92px var(--accent-color),
